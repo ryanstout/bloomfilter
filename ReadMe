@@ -1,0 +1,51 @@
+= BloomFilter
+
+BloomFilter -- A class for making bloomfilters
+
+== Synopsis
+
+  #!/usr/bin/ruby -w
+  require 'bloomfilter'
+  bf = BloomFilter.new(1000, 0.01) # 1000 keys, 1% false-positives
+  bf.add("foo")
+  puts "Yup" if bf.has?("foo")
+
+== Requirements
+
+* Ruby 1.8
+
+=== Recommended:
+
+* BitSet -- C extension availabe on the RAA
+  (http://raa.ruby-lang.org/project/bitset/)
+  
+BloomFilter will try to load BitSet and if that fails it will fall back to
+an included, but limited/slower SimpleVector library -- this included slow
+library is not suitable for anything more than just playing around.
+
+
+== Install
+
+  $ ruby setup.rb config
+  $ ruby setup.rb setup
+  $ ruby setup.rb install
+
+This will set up and install the necessary files in the
+default Ruby locations. For additional installation help
+and options, type:
+
+  $ ruby setup.rb --help
+
+Run the tests (before installing if desired) with:
+
+  $ ruby test/testsuite.rb
+
+== Author
+
+Andrew L Johnson <andrew@siaris.net>
+
+== Copyright
+
+copyright 2006, Andrew L Johnson 
+
+Licensed with the same terms as Ruby itself

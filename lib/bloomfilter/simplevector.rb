@@ -52,8 +52,10 @@ class SimpleVector
 
   def []=(pos,val=1)
     case val
-      when 1: @bvec |= 1<<pos
-      when 0: @bvec &= ~(1<<(length+1) | 1<<pos)
+      when 1
+        @bvec |= 1<<pos
+      when 0
+        @bvec &= ~(1<<(length+1) | 1<<pos)
     end
     self
   end

@@ -14,7 +14,6 @@ Gem::Specification.new do |s|
   s.email = %q{ryan@agileproductions.com}
   s.files = [
     ".config",
-     "InstalledFiles",
      "ReadMe",
      "VERSION",
      "bitset/bitset-1.0/Makefile",
